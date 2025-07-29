@@ -2194,8 +2194,8 @@
                 "Apache-2.0"
             ],
             "issueTrackerUrl": "https://github.com/yakworks/gorm-tools/issues",
-            "latestVersion": "7.3.87",
-            "updated": "2025-06-13T20:55:32.000Z",
+            "latestVersion": "7.3.89",
+            "updated": "2025-07-29T04:43:43.000Z",
             "systemIds": [
                 "org.yakworks:gorm-tools",
                 "org.grails.plugins:gorm-tools"
