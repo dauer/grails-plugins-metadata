@@ -3666,6 +3666,7 @@
         "readme": null
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 9, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "jesque-admin",
             "repo": "plugins",
