@@ -467,6 +467,7 @@
     },
     {
         "comment": "This entry in the registry is for the umbrella project for all the AWS plugins from agorapulse. Perhaps this entry is not necessary as each separate plugin also has its own entry?",
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk",
             "repo": "plugins",
@@ -500,6 +501,7 @@
         "readme": "<h1>AWS SDK Grails Plugin</h1>\n<p><a href=\"https://travis-ci.org/agorapulse/grails-aws-sdk\"><img src=\"https://travis-ci.org/agorapulse/grails-aws-sdk.svg\" alt=\"Build Status\" /></a>  <a href=\"https://bintray.com/agorapulse/plugins/aws-sdk-dynamodb/2.2.12/link\"><img src=\"https://api.bintray.com/packages/agorapulse/plugins/aws-sdk-dynamodb/images/download.svg?version=2.2.12\" alt=\"Download\" /></a></p>\n<h1>Introduction</h1>\n<p>The <a href=\"https://medium.com/@benorama/aws-sdk-plugins-for-grails-3-cc7f910fdc0d#.5gdwdxei3\">AWS SDK Plugins for Grails3</a> are a suite of plugins that adds support for the <a href=\"http://aws.amazon.com/\">Amazon Web Services</a> infrastructure services.</p>\n<p>The aim is to to get you started quickly by providing friendly lightweight utility <a href=\"http://grails.org\">Grails</a> service wrappers, around the official <a href=\"http://aws.amazon.com/sdkforjava/\">AWS SDK for Java</a> (which is great but very \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdjava-esque\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd).\nSee <a href=\"https://medium.com/@benorama/aws-sdk-plugins-for-grails-3-cc7f910fdc0d#.5gdwdxei3\">this article</a> for more info.</p>\n<p>The following services are currently supported:</p>\n<ul>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-cognito\">AWS SDK Cognito Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-dynamodb\">AWS SDK DynamoDB Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-kinesis\">AWS SDK Kinesis Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-s3\">AWS SDK S3 Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-ses\">AWS SDK SES Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-sns\">AWS SDK SNS Grails Plugin</a></li>\n<li><a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-sqs\">AWS SDK SQS Grails Plugin</a></li>\n</ul>\n<p>Please check each README for usage info.</p>\n<h1>Testing</h1>\n<p><a href=\"https://medium.com/agorapulse-stories/how-to-unit-test-aws-services-with-localstack-and-testcontainers-1d39fe5dc6c2\">How to Unit Test AWS Services with LocalStack and Testcontainers</a></p>\n<h1>Bugs</h1>\n<p>To report any bug, please use the project <a href=\"http://github.com/agorapulse/grails-aws-sdk/issues\">Issues</a> section on GitHub.</p>\n<h1>Compatibilty</h1>\n<p>NOTE: For Grails 4 you should consider migrating to <a href=\"https://agorapulse.github.io/micronaut-aws-sdk/\">Micronaut AWS SDK</a> as Miconaut is now the first class citizen in Grails. Use <code>-micronaut-1.2</code> releases for Grails <code>4.0.x</code>.</p>\n<p>| Grails        | Plugin        |\n| ------------- |---------------|\n| 3.3.x, 4.x    | 2.2.x         |\n| 3.2.x         | 2.1.x         |\n| 2.x           | 1.x           |</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-cognito",
             "repo": "plugins",
@@ -525,6 +527,7 @@
         "readme": "<h1>Grails AWS SDK Cognito Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-cognito\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-dynamodb",
             "repo": "plugins",
@@ -550,6 +553,7 @@
         "readme": "<h1>Grails AWS SDK DynamoDB Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-dynamodb\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-kinesis",
             "repo": "plugins",
@@ -575,6 +579,7 @@
         "readme": "<h1>Grails AWS SDK Kinesis Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-kinesis\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-s3",
             "repo": "plugins",
@@ -600,6 +605,7 @@
         "readme": "<h1>Grails AWS SDK S3 Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-s3\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-ses",
             "repo": "plugins",
@@ -625,6 +631,7 @@
         "readme": "<h1>Grails AWS SDK SES Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-ses\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-sns",
             "repo": "plugins",
@@ -650,6 +657,7 @@
         "readme": "<h1>Grails AWS SDK SNS Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-sns\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-sqs",
             "repo": "plugins",
@@ -675,6 +683,7 @@
         "readme": "<h1>Grails AWS SDK SQS Plugin</h1>\n<p>This repo has been migrated to the main <a href=\"https://github.com/agorapulse/grails-aws-sdk\">AWS SDK Grails Plugin</a> repo.</p>\n<p>Here his the <a href=\"https://github.com/agorapulse/grails-aws-sdk/tree/master/grails-aws-sdk-sqs\">latest version of it</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "aws-sdk-sts",
             "repo": "plugins",
