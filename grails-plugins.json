@@ -3472,6 +3472,7 @@
         "readme": null
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "jaxrs-core",
             "repo": "grails-plugins",
@@ -3496,6 +3497,7 @@
         "readme": "<p><a href=\"https://travis-ci.org/budjb/grails-jaxrs\"><img src=\"https://travis-ci.org/budjb/grails-jaxrs.svg?branch=grails-3.x\" alt=\"Build Status\" /></a></p>\n<h1>JAX-RS Plugin for Grails 3.x</h1>\n<p>See the documentation at http://budjb.github.io/grails-jaxrs/3.x/latest/.</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "jaxrs-integration-test",
             "repo": "grails-plugins",
@@ -3521,6 +3523,7 @@
         "readme": "<p><a href=\"https://travis-ci.org/budjb/grails-jaxrs\"><img src=\"https://travis-ci.org/budjb/grails-jaxrs.svg?branch=grails-3.x\" alt=\"Build Status\" /></a></p>\n<h1>JAX-RS Plugin for Grails 3.x</h1>\n<p>See the documentation at http://budjb.github.io/grails-jaxrs/3.x/latest/.</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "jaxrs-jersey1",
             "repo": "grails-plugins",
@@ -3545,6 +3548,7 @@
         "readme": "<p><a href=\"https://travis-ci.org/budjb/grails-jaxrs\"><img src=\"https://travis-ci.org/budjb/grails-jaxrs.svg?branch=grails-3.x\" alt=\"Build Status\" /></a></p>\n<h1>JAX-RS Plugin for Grails 3.x</h1>\n<p>See the documentation at http://budjb.github.io/grails-jaxrs/3.x/latest/.</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "jaxrs-restlet",
             "repo": "grails-plugins",
@@ -3569,6 +3573,7 @@
         "readme": "<p><a href=\"https://travis-ci.org/budjb/grails-jaxrs\"><img src=\"https://travis-ci.org/budjb/grails-jaxrs.svg?branch=grails-3.x\" alt=\"Build Status\" /></a></p>\n<h1>JAX-RS Plugin for Grails 3.x</h1>\n<p>See the documentation at http://budjb.github.io/grails-jaxrs/3.x/latest/.</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "jaxrs-swagger-ui",
             "repo": "grails-plugins",
