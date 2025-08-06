@@ -3196,6 +3196,7 @@
         "readme": "<p><img src=\"https://github.com/grails/grails-data-mapping/workflows/Java%20CI/badge.svg?branch=master\" alt=\"Java CI\" />\n<img src=\"https://github.com/grails/grails-data-mapping/workflows/Release/badge.svg?branch=master\" alt=\"Release\" />\n<img src=\"https://github.com/grails/grails-data-mapping/workflows/Maven%20Central%20Sync/badge.svg?branch=master\" alt=\"Maven Central Sync\" /></p>\n<h1>GORM (Grails Object Mapping)</h1>\n<p>[Grails][Grails] is a framework used to build web applications with the [Groovy][Groovy] programming language. This project provides the plumbings for the GORM API both for Hibernate and for new implementations of GORM ontop of NoSQL datastores.\n[Grails]: http://grails.org/\n[Groovy]: http://groovy-lang.org/</p>\n<h2>Getting Started</h2>\n<p>For further information see the dedicated websites:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/\">Stable Version</a>.</li>\n<li><a href=\"http://gorm.grails.org/snapshot/\">Development Version</a>.</li>\n</ul>\n<h2>License</h2>\n<p>Grails and Groovy are licensed under the terms of the [Apache License, Version 2.0][Apache License, Version 2.0].\n[Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Dec 5, 2024. It is now read-only.",
         "bintrayPackage": {
             "name": "hibernate4",
             "repo": "plugins",
