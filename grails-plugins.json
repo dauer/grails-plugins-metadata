@@ -980,6 +980,7 @@
         "readme": "This plugin establishes a `phoneNumber` constraint property for validateable objects, that being domain objects, and objects implementing `grails.validation.Validateable`. It relies on Google's [libphonenumber](https://github.com/google/libphonenumber) Java implementation"
     },
     {
+        "deprecated": "This repository was archived by the owner on Dec 5, 2024. It is now read-only.",
         "bintrayPackage": {
             "name": "cassandra",
             "repo": "plugins",
