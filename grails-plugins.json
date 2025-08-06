@@ -1939,6 +1939,7 @@
         "readme": "<p><a href=\"https://github.com/sbglasius/external-config\">See the README</a> on GitHub</p>"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "facebook-sdk",
             "repo": "plugins",
@@ -4115,6 +4116,7 @@
         "readme": "<h1>GORM for Neo4j</h1>\n<p>This project implements <a href=\"http://gorm.grails.org/latest/\">GORM</a> for the Neo4j 3.x Graph Database using the Bolt Java Driver.</p>\n<p>For more information see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/latest/neo4j/manual\">Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/latest/neo4j/api\">API</a></li>\n<li><a href=\"https://grails.org/plugins.html#plugin/neo4j\">Grails Plugin</a></li>\n<li><a href=\"https://travis-ci.org/grails/gorm-neo4j\"><img src=\"https://travis-ci.org/grails/gorm-neo4j.svg?branch=master\" alt=\"Build Status\" /></a></li>\n</ul>\n<p>For the current development version see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/snapshot/neo4j/manual\">Beta Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/snapshot/neo4j/api\">Beta API</a></li>\n</ul>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "newrelic",
             "repo": "plugins",
@@ -5399,6 +5401,7 @@
         "readme": null
     },
     {
+        "deprecated": "This repository was archived by the owner on Jan 18, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "segment",
             "repo": "plugins",
