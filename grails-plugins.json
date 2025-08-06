@@ -4826,6 +4826,7 @@
         "readme": "<p><a href=\"http://travis-ci.org/grails-plugins/grails-rabbitmq\"><img src=\"https://travis-ci.org/grails-plugins/grails-rabbitmq.svg?branch=master\" alt=\"Build Status\" /></a></p>\n<h1>grails-rabbitmq</h1>\n<p>Grails RabbitMQ Plugin</p>\n<p><a href=\"https://github.com/puneetbehl/rabbitmqDemo.git\">Sample Applicatoin</a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Jul 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "rabbitmq-native",
             "repo": "grails-plugins",
