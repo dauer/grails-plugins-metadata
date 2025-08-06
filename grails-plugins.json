@@ -1385,6 +1385,7 @@
         "readme": null
     },
     {
+        "deprecated": "This repository was archived by the owner on Apr 8, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "database-migration",
             "repo": "plugins",
