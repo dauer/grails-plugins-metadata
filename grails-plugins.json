@@ -3908,6 +3908,7 @@
         "readme": "<h1>Readme for LightningJ Grails Plugin</h1>\n<p>LightningJ Grails plugin is a project to simplify the usage of the LightningJ\nlibrary in Grails 3.3.x applications and above.</p>\n<p>For documentation see docs/index.adoc of the project web-site at\nhttp://grails.lightningj.org</p>\n<p>Build status Master branch: <a href=\"https://travis-ci.org/lightningj-org/lightningj-grails\"><img src=\"https://travis-ci.org/lightningj-org/lightningj-grails.svg?branch=master\" alt=\"Build Status\" /></a></p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Dec 5, 2024. It is now read-only.",
         "bintrayPackage": {
             "name": "mail",
             "repo": "plugins",
