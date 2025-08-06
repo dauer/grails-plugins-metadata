@@ -197,6 +197,7 @@
         "readme": null
     },
     {
+        "deprecated": "This repository was archived by the owner on Mar 3, 2023. It is now read-only.",
         "bintrayPackage": {
             "name": "angular2-scaffolding",
             "repo": "plugins",
@@ -221,6 +222,7 @@
         "readme": "<h1>Grails 3 Angular Scaffolding Plugin</h1>\n<p><a href=\"https://travis-ci.org/grails-plugins/grails-angular-scaffolding\"><img src=\"https://travis-ci.org/grails-plugins/grails-angular-scaffolding.svg?branch=master\" alt=\"Build Status\" /></a></p>\n<p>A plugin for generating client side assets based on domain classes</p>\n<h2>Documentation</h2>\n<p>Latest: https://grails-plugins.github.io/grails-angular-scaffolding/latest\nSnapshot: https://grails-plugins.github.io/grails-angular-scaffolding/snapshot</p>\n"
     },
     {
+        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "angularjs-scaffolding",
             "repo": "plugins",
