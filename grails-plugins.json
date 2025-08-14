@@ -386,7 +386,7 @@
             "latestVersion": "5.0.2",
             "updated": "2024-01-09T11:43:22.000Z",
             "systemIds": [
-                "org.grails.plugins:async"
+                "org.apache.grails:grails-async"
             ],
             "vcsUrl": "https://github.com/apache/grails-core"
         },
@@ -1810,7 +1810,7 @@
             "latestVersion": "5.0.2",
             "updated": "2024-01-09T11:43:24.000Z",
             "systemIds": [
-                "org.grails.plugins:events"
+                "org.apache.grails:grails-events"
             ],
             "vcsUrl": "https://github.com/apache/grails-core"
         },
