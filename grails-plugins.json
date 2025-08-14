@@ -371,7 +371,6 @@
         "readme": "<h1>Asset Pipeline Handlebars Renderer Grails Plugin</h1>\n<p>This plugin provides for server side execution of <a href=\"http://handlebarsjs.com/\">Handlebars.js</a> templates. It is\nintended to compliment the <a href=\"https://github.com/bertramdev/asset-pipeline\">handlebars-asset-pipeline</a> plugin\nwhich compiles Handlebars templates into JavaScript for client side usage. The templates are compiled into Java\ncode using <a href=\"https://github.com/jknack/handlebars.java\">handlebars-java</a>.</p>\n<h2>Installation</h2>\n<p>Add to build.gradle</p>\n<pre><code>dependencies {\n     compile &quot;org.grails.plugins:asset-pipeline-handlebars-renderer:0.1&quot;\n}\n</code></pre>\n<h2>Configuration</h2>\n<p>This plugin uses the same configuration as the <a href=\"https://github.com/bertramdev/asset-pipeline\">handlebars-asset-pipeline</a> plugin. Templates can be created in the standard assets/javascripts folder with an extension of .handlebars or .hbs. By default the <code>templateRoot</code> for your templates is specified as <code>templates</code>. This means that any handlebars file within  assets/javascripts/templates/ will utilize its file name (without the extension) as its template name. So a template that lives at <code>assets/javascripts/templates/my_template.hbs</code> can be rendered as <code>&lt;handlebars:render template=&quot;my_template&quot;/&gt;</code>.</p>\n<h2>Usage</h2>\n<p>A <code>handlebars:render</code> tag is provided to render handlebars templates similarly to how regular gsp templates are applied in views. Templates can be rendered inline:</p>\n<pre><code class=\"language-html\">&lt;handlebars:render model=&quot;[name: 'bob']&quot;&gt;\n    &lt;p&gt;Hello {{name}}&lt;/p&gt;\n&lt;/handlebars:render&gt;\n</code></pre>\n<p>Or they can be stored in a separate file and referenced by name:</p>\n<pre><code class=\"language-html\">&lt;handlebars:render template=&quot;home/hello&quot; model=&quot;[name: 'bob']&quot;/&gt;\n</code></pre>\n<p>For the above example, (assuming the default <code>templateRoot</code>) the template would be located at <code>grails-app/assets/javascripts/templates/home/hello.hbs</code>.</p>\n<p>If no model is supplied then the default page bindings (page scope variables) are used:</p>\n<pre><code class=\"language-html\">&lt;handlebars:render&gt;\n    Hello {{name}} from the controller\n&lt;/handlebars:render&gt;\n</code></pre>\n<p>Behind the scenes, the taglib uses the <code>handlebarsService</code> to render templates. You can do the same if, for example, you want to render the template directly from a controller:</p>\n<pre><code class=\"language-groovy\">def handlebarsService\n\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ndef list() {\n    render handlebarsService.apply(&quot;home/accounts&quot;, [accounts: Account.list()])\n}\n</code></pre>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on May 28, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "async",
             "repo": "plugins",
@@ -383,16 +382,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-async/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.0.2",
             "updated": "2024-01-09T11:43:22.000Z",
             "systemIds": [
                 "org.grails.plugins:async"
             ],
-            "vcsUrl": "https://github.com/grails/grails-async"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://async.grails.org/latest/guide/index.html",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/async/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-async/maven-metadata.xml",
         "readme": ""
     },
     {
@@ -1795,7 +1794,6 @@
         "readme": "<h1>Ember Asset-Pipeline</h1>\n<p><a href=\"https://travis-ci.org/bertramdev/ember-asset-pipeline\"><img src=\"https://travis-ci.org/bertramdev/ember-asset-pipeline.svg\" alt=\"Build Status\" /></a></p>\n<p><strong>MOVED</strong>: This project has moved to a sub project of the main asset-pipeline repository <a href=\"http://github.com/bertramdev/asset-pipeline\">http://github.com/bertramdev/asset-pipeline</a></p>\n<h2>Overview</h2>\n<p>The JVM <code>ember-asset-pipeline</code> is a plugin that provides handlebars template precompiler support  for Ember.js to asset-pipeline.</p>\n<p>Current Ember Version: 1.7.0</p>\n<p>For more information on how to use asset-pipeline, visit <a href=\"http://www.github.com/bertramdev/asset-pipeline\">here</a>.</p>\n<h2>Usage</h2>\n<p>Simply create files in your standard <code>assets/javascripts</code> folder with extension <code>.handlebars</code> or <code>.hbs</code>.\nBy default the templateRoot for your template names is specified as 'templates'. This means that any handlebars file within the root assets/javascripts folder will utilize its file name (without the extension) as its template name. Or a file in <code>templates/show.handlebars</code> would be named <code>templates/show</code>. If templates is set as the templateRoot than it would be named <code>show</code></p>\n<p>It is also possible to change the template path seperator for templatenames to be used by handlebars:</p>\n<p>Gradle Example:</p>\n<pre><code class=\"language-groovy\">assets {\n\tconfig = [\n\thandlebars: [\n\t\ttemplateRoot: 'templates',\n\t\ttemplatePathSeperator: '/'\n\t]\n\t]\n}\n</code></pre>\n<p>Grails Example:</p>\n<pre><code class=\"language-groovy\">grails {\n\tassets {\n\t\thandlebars {\n\t\t\ttemplateRoot = 'templates'\n\t\t\ttemplatePathSeperator = &quot;/&quot;\n\t\t}\n\t}\n}\n</code></pre>\n<p>To use the handlebars runtime simply add handlebars js to your application.js or your gsp file</p>\n<pre><code class=\"language-javascript\">//=require handlebars\n</code></pre>\n<h2>Using in the Browser</h2>\n<p>Template functions are stored in the <code>Handlebars.templates</code> object using the template name. If the template name is\n<code>person/show</code>, then the template function can be accessed from <code>Handlebars.templates['person/show']</code>. See the Template Names section for how template names are calculated.</p>\n<p>See the <a href=\"http://handlebarsjs.com/\">Handlebars.js website</a> for more information on using Handlebars template functions.</p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on May 28, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "events",
             "repo": "plugins",
@@ -1808,16 +1806,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-async/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.0.2",
             "updated": "2024-01-09T11:43:24.000Z",
             "systemIds": [
                 "org.grails.plugins:events"
             ],
-            "vcsUrl": "https://github.com/grails/grails-async"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://async.grails.org/latest/guide/index.html#events",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/events/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-events/maven-metadata.xml",
         "readme": ""
     },
     {
