@@ -4215,7 +4215,7 @@
                 "acl",
                 "business-rules",
                 "permissions",
-                "Security",
+                "security",
                 "spring-security"
             ],
             "licenses": [
