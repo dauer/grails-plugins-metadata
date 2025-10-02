@@ -1187,7 +1187,6 @@
         "readme": null
     },
     {
-        "deprecated": "This repository was archived by the owner on Apr 8, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "converters",
             "repo": "plugins",
@@ -1200,16 +1199,17 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-plugin-converters/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.0.0",
             "updated": "2024-02-26T10:59:18.000Z",
             "systemIds": [
-                "org.grails.plugins:converters"
+                "org.grails.plugins:converters",
+                "org.apache.grails:grails-converters"
             ],
-            "vcsUrl": "https://github.com/grails-plugins/grails-plugin-converters"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": null,
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/converters/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-converters/maven-metadata.xml",
         "readme": "<h2>Grails Converters</h2>\n<p>This is the Converters plugin that has been part of Grails core up until version 3.3 and now is a standalone plugin.</p>\n<p>Users of Grails 3.3.x and above should use this plugin.</p>\n<h3>Installation</h3>\n<p>Simply add the dependency to your <code>build.gradle</code> file:</p>\n<pre><code class=\"language-groovy\">compile &quot;org.grails.plugins:converters&quot;\n</code></pre>\n"
     },
     {
@@ -1390,7 +1390,6 @@
         "readme": null
     },
     {
-        "deprecated": "This repository was archived by the owner on Apr 8, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "database-migration",
             "repo": "plugins",
@@ -1404,16 +1403,17 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-database-migration/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.0.0",
             "updated": "2024-12-18T22:20:28.000Z",
             "systemIds": [
-                "org.grails.plugins:database-migration"
+                "org.grails.plugins:database-migration",
+                "org.apache.grails:grails-data-hibernate5-dbmigration"
             ],
-            "vcsUrl": "https://github.com/grails/grails-database-migration"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails.github.io/grails-database-migration/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/database-migration/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-data-hibernate5-dbmigration/maven-metadata.xml",
         "readme": null
     },
     {
@@ -1972,7 +1972,6 @@
         "readme": "<h1>Facebook SDK Grails Plugin</h1>\n<p><a href=\"https://travis-ci.org/agorapulse/grails-facebook-sdk\"><img src=\"https://travis-ci.org/agorapulse/grails-facebook-sdk.svg\" alt=\"Build Status\" /></a>\n<a href=\"https://bintray.com/agorapulse/plugins/facebook-sdk/_latestVersion\"><img src=\"https://api.bintray.com/packages/agorapulse/plugins/facebook-sdk/images/download.svg\" alt=\"Download\" /></a></p>\n<h1>Introduction</h1>\n<p>The <a href=\"http://developers.facebook.com/\">Facebook Platform</a> is a set of APIs that make your application more social. Read more about <a href=\"http://developers.facebook.com/docs/guides/web\">integrating Facebook with your web site</a> on the Facebook developer site.</p>\n<p>This project contains the open source <strong>Grails Facebook SDK Plugin</strong> that allows you to integrate the <a href=\"http://developers.facebook.com/\">Facebook Platform</a> on a website/app powered by <a href=\"http://grails.org\">Grails</a>.</p>\n<p>This plugin is a port of the official <a href=\"http://github.com/facebook/facebook-php-sdk\">Facebook PHP SDK</a> to <a href=\"http://grails.org\">Grails 3.0</a>.</p>\n<p>It supports the latest <em>OAuth2.0 authentication</em> (required since October 1st 2011).</p>\n<p><strong>Grails Facebook SDK Plugin</strong> provides the following Grails artefacts:</p>\n<ul>\n<li><strong>FacebookContext</strong> - A Spring bean to get current Facebook context in controllers, when running <a href=\"http://developers.facebook.com/docs/guides/canvas/\">apps on Facebook.com</a> or <a href=\"http://developers.facebook.com/docs/guides/web\">websites with the Facebook Platform</a>.</li>\n<li><strong>FacebookGraphClient</strong> - A client to call <a href=\"http://developers.facebook.com/docs/reference/api/\">Facebook Graph API</a>, which is a wrapper around the rock solid <a href=\"http://restfb.com/\">RestFB java library</a> version 1.32.0 (released October 13, 2016).</li>\n<li><strong>FacebookJSTagLib</strong> - A collection of tags to easily integrate <a href=\"http://developers.facebook.com/docs/reference/javascript/\">Facebook JS SDK</a> in your GSPs.</li>\n</ul>\n<p><strong>WARNING</strong>: Facebook API v3.0 is now used by default.</p>\n<h1>Installation</h1>\n<p>Declare the plugin dependency in the <em>build.gradle</em> file, as shown here:</p>\n<pre><code class=\"language-groovy\">dependencies {\n    ...\n    compile &quot;org.grails.plugins:facebook-sdk:4:0.0&quot;\n    ...\n}\n</code></pre>\n<h1>Config</h1>\n<p>Create a Facebook app on <a href=\"https://developers.facebook.com/apps\">Facebook Developers</a>, in order to get your own app ID and app secret.</p>\n<p>Add your Facebook app parameters to your <em>grails-app/conf/application.yml</em>:</p>\n<pre><code class=\"language-yml\">grails:\n    plugin:\n        facebooksdk:\n            app:\n                id: {APP_ID}\n                permissions: {APP_PERMISSIONS} // Ex. ['email','user_photos']\n                secret: {APP_SECRET}\n</code></pre>\n<p>By default, latest Graph API v3.3 will be used.\nYou can override default settings with <code>apiVersion</code> setting:</p>\n<pre><code class=\"language-yml\">grails:\n    plugin:\n        facebooksdk:\n            apiVersion: v2.3\n</code></pre>\n<p>Since FacebookContext should be instantiated at each request, you must use <code>prototype</code> scope for your Controllers (since Grails 2.3, <code>singleton</code> is the default scope).</p>\n<pre><code class=\"language-yml\">grails:\n    controllers:\n        defaultScope: prototype\n</code></pre>\n<p>Default jQuery selector is <code>$</code>, if you require another one, you can define it globally in your <em>grails-app/conf/application.groovy</em>:</p>\n<pre><code class=\"language-yml\">grails:\n    plugin:\n        facebooksdk:\n            customSelector: jQuery\n</code></pre>\n<h1>Bugs</h1>\n<p>To report any bug, please use the project <a href=\"http://github.com/agorapulse/grails-facebook-sdk/issues\">Issues</a> section on GitHub.</p>\n<h1>Feedback</h1>\n<p>The <strong>Grails Facebook SDK</strong> is not an official Facebook SDK such as <a href=\"http://developers.facebook.com/docs/reference/javascript/\">Javascript</a>, <a href=\"http://github.com/facebook/facebook-php-sdk\">PHP</a>, <a href=\"http://github.com/facebook/facebook-ios-sdk/\">iOS</a> and <a href=\"http://github.com/facebook/facebook-android-sdk\">Android SDKs</a>.</p>\n<p>It is developed by <a href=\"http://www.agorapulse.com\">AgoraPulse</a>.</p>\n<p>The <strong>Grails Facebook SDK</strong> is licensed under the <a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\">Apache Licence, Version 2.0</a>.</p>\n<h1>Breaking Changes</h1>\n<h2>4.0.1</h2>\n<ul>\n<li>Default return type of <code>fetchObject</code> from <code>FacebookExtensions</code> is back to <code>JsonObject</code> instead of <code>Map</code></li>\n</ul>\n<h2>4.0.0</h2>\n<ul>\n<li>restfb upgrade - see https://github.com/restfb/restfb/blob/master/migrations.md\n<ul>\n<li>removed <code>FacebookRestClient</code> and <code>DefaultFacebookRestClient</code></li>\n<li>avoid using raw <code>JsonObject</code> as the class has completely changed i.g. <code>JsonObject</code> from restfb 2.x implements own method <code>asBoolean()</code> which fails if the value is not <code>boolean</code> so you need to do regular <code>foo != null</code> check for testing the presense of the returned <code>JsonObject</code> value</li>\n</ul>\n</li>\n<li><code>FacebookGraphClient</code> is now deprecated, use <code>FacebookGraphClientService</code> to create instances of <code>FacebookClient</code> with similar capabilities</li>\n<li><code>FacebookExtensions</code> the most useful methods from <code>FacebookGraphClient</code>are now injected using extensions methods to <code>FacebookClient</code> interface directly</li>\n</ul>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Mar 10, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "fields",
             "repo": "plugins",
@@ -1984,17 +1983,17 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/gpc/fields/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.0.3",
             "updated": "2024-04-08T19:47:32.000Z",
             "systemIds": [
-                "io.github.gpc:fields"
+                "org.apache.grails:grails-fields"
             ],
-            "vcsUrl": "https://github.com/gpc/fields"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
-        "documentationUrl": "https://gpc.github.io/fields/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/io/github/gpc/fields/maven-metadata.xml",
-        "readme": "Find the latest documentation here: https://gpc.github.io/fields"
+        "documentationUrl": "https://docs.grails.org/latest/guide/theWebLayer.html#fields",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-fields/maven-metadata.xml",
+        "readme": "Find the latest documentation here: https://docs.grails.org/latest/guide/theWebLayer.html#fields"
     },
     {
         "displayName": "file-viewer",
@@ -2112,16 +2111,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/geb/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "4.1.1",
             "updated": "2024-12-22T00:53:39.000Z",
             "systemIds": [
-                "org.grails.plugins:geb"
+                "org.apache.grails:grails-geb"
             ],
-            "vcsUrl": "https://github.com/grails/geb"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": null,
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/geb/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-geb/maven-metadata.xml",
         "readme": null
     },
     {
@@ -3005,7 +3004,6 @@
         "readme": "<h1>Greenmail Plugin for Grails 3</h1>\n<p>This is a fork of grails greenmail plugin for grails 3.</p>\n<h2>INSTALL</h2>\n<p>Add a dependency for the plugin in <code>build.gradle</code>:</p>\n<pre><code>\ndependencies {    \n    compile 'org.grails.plugins:greenmail:2.0.0.RC2'    \n}\n\n</code></pre>\n<h2>USAGE</h2>\n<p>Provides a wrapper around <a href=\"http://www.icegreen.com/greenmail/\">GreenMail</a> and provides a view that displays <code>sent</code> messages - useful for testing application in the <code>development</code> or <code>test</code> environments.</p>\n<h3>Installation</h3>\n<pre><code>grails install-plugin greenmail\n</code></pre>\n<p>The plugin assumes that you have some sort of Java mail provider installed (for instance the Grails mail plugin). You need to define a SMTP port for the mock Greenmail SMTP server to start with. Using the Grails Mail plugin, this is as simple as defining the <code>grails.mail.port</code> property in <code>Config.groovy</code>, like this (see the first line in the <code>development</code> and <code>test</code> blocks):</p>\n<pre><code>environments {\n    production {\n        grails.serverURL = &quot;http://www.changeme.com&quot;\n    }\n    development {\n\tgrails.mail.port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port\n        grails.serverURL = &quot;http://localhost:8080/${appName}&quot;\n    }\n    test {\n\tgrails.mail.port = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port\n        grails.serverURL = &quot;http://localhost:8080/${appName}&quot;\n    }\n}\n</code></pre>\n<p>You can also completely disable the plugin by using the config setting <code>grails.plugin.greenmail.disabled = true</code>.  For example, to disable greenmail in production:</p>\n<pre><code>environments {\n    production {\n       grails.plugin.greenmail.disabled=true\n    }\n}\n</code></pre>\n<p>If you need to change the default listening port (1025) you can use the <code>grails.plugin.greenmail.ports.smtp</code> configuration variable. For example:</p>\n<pre><code>environments {\n    test {\n       grails.plugin.greenmail.ports.smtp = 2025\n    }\n}\n</code></pre>\n<h3>Usage in Integration Tests</h3>\n<p>The plugin can be used to capture email messages during integration tests. For example:</p>\n<pre><code>import com.icegreen.greenmail.util.*\n\nclass GreenmailTests extends GroovyTestCase {\n    def mailService\n    def greenMail\n\n    void testSendMail() {\n        Map mail = [message:'hello world', from:'from@piragua.com', to:'to@piragua.com', subject:'subject']\n\n        mailService.sendMail {\n            to mail.to\n            from mail.from\n            subject mail.subject\n            body mail.message\n        }\n        \n        assertEquals(1, greenMail.getReceivedMessages().length)\n\t\n        def message = greenMail.getReceivedMessages()[0]\n\t\t\n        assertEquals(mail.message, GreenMailUtil.getBody(message))\n        assertEquals(mail.from, GreenMailUtil.getAddressList(message.from))\n        assertEquals(mail.subject, message.subject)\n    }\n\n    void tearDown() {\n        greenMail.deleteAllMessages()\n    }\n}\n</code></pre>\n<p>The plugin adds a <code>deleteAllMessages()</code> convenience method to the <code>greenMail</code> bean that deletes all received messages.</p>\n<h3>Usage in running application</h3>\n<p>The plugin provides a controller and view to show messages that are <code>sent</code> from the application.  Simply browse to http://localhost:8080/greenmail and it will show a list of messages sent.  You can click on the <code>show</code> link to view the raw message.</p>\n<h3>Roadmap</h3>\n<p>This is a fully functional plugin, though there are some features that I think would be worth adding.  Contributions and patches are welcome!</p>\n<ul>\n<li>Messages sent by the Grails Mail plugin have duplicate &quot;TO:&quot; fields in the raw message and in the address list, for instance if the recipient is spam@piragua.com, then that email address is listed twice when you retrieve the address list for RecipientType.TO (e.g. GreenMailUtil.getAddressList(message.getRecipients(javax.mail.Message.RecipientType.TO))</li>\n<li>Ability to view HTML email messages as they appear in a mail client rather than as RAW message.</li>\n</ul>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on May 28, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "gsp",
             "repo": "plugins",
@@ -3017,16 +3015,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-gsp/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "6.2.4",
             "updated": "2024-11-19T22:48:43.000Z",
             "systemIds": [
-                "org.grails.plugins:gsp"
+                "org.apache.grails:grails-gsp"
             ],
-            "vcsUrl": "https://github.com/grails/grails-gsp"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://gsp.grails.org/latest/guide/index.html",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/gsp/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-gsp/maven-metadata.xml",
         "readme": "<div id=\"preamble\">\n<div class=\"sectionbody\">\n<div class=\"paragraph\">\n<p>This project contains the sources for GSP, the server-side view rendering technology used in <a href=\"http://grails.org\">Grails</a>.</p>\n</div>\n</div>\n</div>\n<div class=\"sect1\">\n<h2 id=\"_documentation\">Documentation</h2>\n<div class=\"sectionbody\">\n<div class=\"ulist\">\n<ul>\n<li>\n<p>Latest - <a href=\"http://gsp.grails.org\" class=\"bare\">http://gsp.grails.org</a></p>\n</li>\n<li>\n<p>Latest - <a href=\"http://gsp.grails.org/latest/api\" class=\"bare\">http://gsp.grails.org/latest/api</a></p>\n</li>\n<li>\n<p>Snapshot Guide - <a href=\"http://gsp.grails.org/snapshot\" class=\"bare\">http://gsp.grails.org/snapshot</a></p>\n</li>\n<li>\n<p>Snapshot API - <a href=\"http://gsp.grails.org/snapshot\" class=\"bare\">http://gsp.grails.org/snapshot</a></p>\n</li>\n</ul>\n</div>\n</div>\n</div>"
     },
     {
@@ -3248,16 +3246,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-data-mapping/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "8.1.1",
             "updated": "2024-11-19T01:27:50.000Z",
             "systemIds": [
-                "org.grails.plugins:hibernate5"
+                "org.apache.grails:grails-data-hibernate5"
             ],
-            "vcsUrl": "https://github.com/grails/grails-data-mapping"
+            "vcsUrl": "https://github.com/apache/grails-core/issues"
         },
-        "documentationUrl": "https://grails.github.io/grails-data-mapping/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/hibernate5/maven-metadata.xml",
+        "documentationUrl": null,
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-data-hibernate5/maven-metadata.xml",
         "readme": "<p><img src=\"https://github.com/grails/grails-data-mapping/workflows/Java%20CI/badge.svg?branch=master\" alt=\"Java CI\" />\n<img src=\"https://github.com/grails/grails-data-mapping/workflows/Release/badge.svg?branch=master\" alt=\"Release\" />\n<img src=\"https://github.com/grails/grails-data-mapping/workflows/Maven%20Central%20Sync/badge.svg?branch=master\" alt=\"Maven Central Sync\" /></p>\n<h1>GORM (Grails Object Mapping)</h1>\n<p>[Grails][Grails] is a framework used to build web applications with the [Groovy][Groovy] programming language. This project provides the plumbings for the GORM API both for Hibernate and for new implementations of GORM ontop of NoSQL datastores.\n[Grails]: http://grails.org/\n[Groovy]: http://groovy-lang.org/</p>\n<h2>Getting Started</h2>\n<p>For further information see the dedicated websites:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/\">Stable Version</a>.</li>\n<li><a href=\"http://gorm.grails.org/snapshot/\">Development Version</a>.</li>\n</ul>\n<h2>License</h2>\n<p>Grails and Groovy are licensed under the terms of the [Apache License, Version 2.0][Apache License, Version 2.0].\n[Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html</p>\n"
     },
     {
@@ -4039,7 +4037,6 @@
         "readme": "<h1>Infobip plugin <a href=\"https://travis-ci.org/osaetinevbuoma/modninfobip\"><img src=\"https://travis-ci.org/osaetinevbuoma/modninfobip.svg?branch=master\" alt=\"Build Status\" /></a></h1>\n<p>Grails plugin for Infobip SMS API</p>\n<h2>Prerequisite to using <strong>modninfobip</strong> plugin</h2>\n<ul>\n<li>Sign up for an <a href=\"www.infobip.com\">infobip</a> account</li>\n<li>Confirm your account</li>\n</ul>\n<h2>Method Declarations</h2>\n<h3>Generate basic authorization</h3>\n<pre><code>String basicAuthorization(String username, String password)\n</code></pre>\n<ul>\n<li>username - infobip username</li>\n<li>password - infobip password</li>\n</ul>\n<p><strong>NB</strong>: Basic authorization is mandatory for all infobip REST API requests.</p>\n<h3>Send an SMS to a single phone number</h3>\n<pre><code>JSONObject sendSingleMessage(String authorization, String from, String to, String text)\n</code></pre>\n<ul>\n<li>from - Sender phone number registered on infobip (Phone numbers are usually prefixed with <em>+ (plus sign)</em>, followed by a <em>country code</em>, <em>network code</em> and the <em>subscriber number</em>)</li>\n<li>to - Recipient phone number</li>\n<li>text - SMS message to send</li>\n</ul>\n<h3>Send an SMS to multiple phone numbers</h3>\n<pre><code>JSONObject sendSingleMessage(String authorization, String from, List to, String text)\n</code></pre>\n<ul>\n<li>to - A list of string types of recipients' phone numbers</li>\n</ul>\n<h3>Send multiple SMS's to multiple or same recipient phone number</h3>\n<pre><code>JSONObject sendMultipleMessages(String authorization, JSONObject data)\n</code></pre>\n<ul>\n<li>data - A json object of data. An example is show below.</li>\n</ul>\n<pre><code>{  \n   &quot;messages&quot;:[  \n      {  \n         &quot;from&quot;:&quot;InfoSMS&quot;,\n         &quot;to&quot;:[  \n            &quot;41793026727&quot;,\n            &quot;41793026731&quot;\n         ],\n         &quot;text&quot;:&quot;May the Force be with you!&quot;\n      },\n      {  \n         &quot;from&quot;:&quot;41793026700&quot;,\n         &quot;to&quot;:&quot;41793026785&quot;,\n         &quot;text&quot;:&quot;A long time ago, in a galaxy far, far away... It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.&quot;\n      }\n   ]\n}\n</code></pre>\n<h3>Get delivery reports</h3>\n<pre><code>JSONObject deliveryReport(String authorization)\n</code></pre>\n<h3>Get filtered delivery reports</h3>\n<pre><code>JSONObject deliveryReport(String authorization, Map filters)\n</code></pre>\n<ul>\n<li>filters - A filter map. View <a href=\"https://dev.infobip.com/docs/delivery-reports\">here</a> for more filter information.</li>\n</ul>\n<p><strong>NB</strong>: Delivery reports can only be gotten once. A second call returns an empty result.</p>\n<h3>Pull received messages to phone number from Infobip server</h3>\n<pre><code>JSONObject pullReceivedMessages(String authorization)\nJSONObject pullReceivedMessages(String authorization, int limit)\n</code></pre>\n<ul>\n<li>limit - The number of messages to pull from server. Default is 50 and maximum is 10000</li>\n</ul>\n<h3>Get logs</h3>\n<pre><code>// Call the messageLog method of corresponding service \n// class (SendMessageService or ReceiveMessageService)\nJSONObject messageLog(String authorization)\n</code></pre>\n<h3>Get filtered logs</h3>\n<pre><code>// Call the messageLog method of corresponding service \n// class (SendMessageService or ReceiveMessageService)\nJSONObject messageLog(String authorization, Map filters)\n</code></pre>\n<ul>\n<li>filters - A filter map. View <a href=\"https://dev.infobip.com/docs/message-logs\">here</a> for filter information for sent messages and\n<a href=\"https://dev.infobip.com/docs/received-messages-logs\">here</a> for filter information for received messages.</li>\n</ul>\n<h3>Check Account Balance</h3>\n<pre><code>JSONObject checkAccountBalance(String authorization)\n</code></pre>\n<h2>Installation</h2>\n<p>Edit <code>application.groovy</code> (or <code>application.yml</code> if you prefer) and <code>build.gradle</code></p>\n<ul>\n<li>application.groovy</li>\n</ul>\n<pre><code>infobip.host = &quot;https://api.infobip.com/sms/1&quot;\n</code></pre>\n<p><strong>OR</strong></p>\n<ul>\n<li>application.yml</li>\n</ul>\n<pre><code>infobip:\n    host: https://api.infobip.com/sms/1\n</code></pre>\n<ul>\n<li>build.gradle</li>\n</ul>\n<pre><code>repositories {\n    maven {\n        url  &quot;http://dl.bintray.com/modnsolutions/plugins-libraries&quot; \n    }\n}\n\ndependencies {\n    compile &quot;org.grails.plugins:modninfobip:1.0.2&quot;\n}\n</code></pre>\n<h2>Usage</h2>\n<ul>\n<li>Import the required service classes into you Grails Service or Controller class.</li>\n</ul>\n<pre><code>import com.modnsolutions.ReceiveMessageService //service to pull received messages and message log from infobip server\nimport com.modnsolutions.SendMessageService // service to send messages via infobip, get delivery report and message logs\nimport com.modnsolutions.UtilitiesService\n</code></pre>\n<ul>\n<li>Inject AuthorizationService and SendMessageService classes into your Grails Service or Controller class.</li>\n</ul>\n<pre><code>ReceiveMessageService receiveMessageService\nSendMessageService sendMessageService\nUtilitiesService utilitiesService\n</code></pre>\n<ul>\n<li>In your class method, generate your basic authorization code and send your messages</li>\n</ul>\n<pre><code>String basicAuthorization = utilitiesService.basicAuthorization(&quot;INFOBIP_USERNAME&quot;, &quot;INFOBIP_PASSWORD&quot;)\nJSONObject singleMessageResponse = sendMessageService.sendSingleMessage(basicAuthorization, from, to, text)\nprintln singleMessageResponse\n</code></pre>\n<h3>Example</h3>\n<pre><code>import com.modnsolutions.ReceiveMessageService\nimport com.modnsolutions.SendMessageService\nimport com.modnsolutions.UtilitiesService\n\n// In Grails you can handle json objects and arrays by importing and using\n// import org.grails.web.json.JSONArray\n// import org.grails.web.json.JSONObject\n\nclass SMSController {\n    ReceiveMessageService receiveMessageService\n    SendMessageService sendMessageService\n    UtilitiesService utilitiesService\n    \n    def sendSingleSMS(String from, String to, String text) {\n        String basicAuthorization = utilitiesService.basicAuthorization(&quot;INFOBIP_USERNAME&quot;, &quot;INFORBIP_PASSWORD&quot;)\n        render sendMessageService.sendSingleMessage(basicAuthorization, from, to, text)\n    }\n    \n    def pullMessages() {\n        String basicAuthorization = utilitiesService.basicAuthorization(&quot;INFOBIP_USERNAME&quot;, &quot;INFORBIP_PASSWORD&quot;)\n        render receiveMessageService.pullReceivedMessages(basicAuthorization)\n    }\n    \n    def checkAccountBalance() {\n        String basicAuthorization = utilitiesService.basicAuthorization(&quot;INFOBIP_USERNAME&quot;, &quot;INFORBIP_PASSWORD&quot;)\n        render utilitiesService.checkAccountBalance(basicAuthorization)\n    }\n    \n    ...\n}\n</code></pre>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Mar 13, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "mongodb",
             "repo": "plugins",
@@ -4052,16 +4049,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/gorm-mongodb/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "8.2.0",
             "updated": "2024-03-15T19:26:14.000Z",
             "systemIds": [
-                "org.grails.plugins:mongodb"
+                "org.apache.grails:grails-data-mongodb"
             ],
-            "vcsUrl": "https://github.com/grails/gorm-mongodb"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": null,
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/mongodb/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-data-mongodb/maven-metadata.xml",
         "readme": "<p><img src=\"https://github.com/grails/gorm-mongodb/workflows/Java%20CI/badge.svg?branch=master\" alt=\"Java CI\" />\n<img src=\"https://github.com/grails/gorm-mongodb/workflows/Release/badge.svg?branch=master\" alt=\"Release\" /></p>\n<h1>GORM for MongoDB</h1>\n<p>This project implements <a href=\"http://gorm.grails.org/latest/\">GORM</a> for the MongoDB Document Database.</p>\n<p>NOTE: This source code here is for version 6.x and above. For prevoius versions' source see the relevant branch on the <a href=\"https://github.com/grails/grails-data-mapping/tree/5.x/grails-datastore-gorm-mongodb\">Grails Data Mapping project</a>.</p>\n<p>For more information see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/latest/mongodb/manual\">Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/latest/mongodb/api\">API</a></li>\n<li><a href=\"https://grails.org/plugins.html#plugin/mongodb\">Grails Plugin</a></li>\n</ul>\n<p>For the current development version see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/snapshot/mongodb/manual\">Beta Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/snapshot/mongodb/api\">Beta API</a></li>\n</ul>\n"
     },
     {
@@ -5306,7 +5303,6 @@
         "readme": null
     },
     {
-        "deprecated": "This repository was archived by the owner on Mar 10, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "scaffolding",
             "repo": "plugins",
@@ -5318,16 +5314,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/scaffolding/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "5.1.3",
             "updated": "2024-11-20T12:41:42.000Z",
             "systemIds": [
-                "org.grails.plugins:scaffolding"
+                "org.apache.grails:grails-scaffolding"
             ],
-            "vcsUrl": "https://github.com/grails/scaffolding"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": null,
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/scaffolding/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-scaffolding/maven-metadata.xml",
         "readme": null
     },
     {
@@ -5579,7 +5575,6 @@
         "readme": "<h1>grails-soft-delete</h1>\n<p>Provides Grails domain classes support for soft (or logical) deletes.</p>\n<h3>WARNING</h3>\n<p>This code is experimental. I can't garantee it will work, but I will improve it over time.</p>\n<h3>How to install</h3>\n<p>Slap the following code into <code>build.gradle</code>, dependencies part:</p>\n<p><code>compile 'org.grails.plugins:soft-delete:0.3'</code></p>\n<p>Alternatively you have to clone the repository, build the jar file and put it on a libs folder inside your application.</p>\n<h3>How it works</h3>\n<p>The plugin enhances all the domain classes using traits, overriding the common GORM methods.</p>\n<h3>What is supported</h3>\n<p>The following methods are supported:</p>\n<ul>\n<li>delete() (obvious, isn't it)</li>\n<li>get()</li>\n<li>load()</li>\n<li>getAll()</li>\n<li>list()</li>\n<li>first()</li>\n<li>last()</li>\n<li>findBy...(), findAllBy...(), countBy...()</li>\n<li>createCriteria()</li>\n</ul>\n<h3>What is not</h3>\n<p>Well, the world isn't perfect</p>\n<ul>\n<li>All methods that use string query</li>\n<li>find() (which uses closures)</li>\n</ul>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Mar 10, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "spring-security-acl",
             "repo": "plugins",
@@ -5593,13 +5588,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails-plugins/grails-spring-security-acl/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "4.0.0.M2",
             "updated": "2019-04-18T15:29:17.202Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-acl"
+                "org.apache.grails:grails-spring-security-acl"
             ],
-            "vcsUrl": "https://github.com/grails-plugins/grails-spring-security-acl"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-acl/",
         "mavenMetadataUrl": null,
@@ -5630,7 +5625,6 @@
         "readme": "<h1>Grails Spring Security AppInfo Plugin</h1>\n<p>See <a href=\"https://grails-plugins.github.io/grails-spring-security-appinfo/\">documentation</a> for further information.</p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "spring-security-cas",
             "repo": "plugins",
@@ -5644,16 +5638,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-spring-security-cas/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "4.0.0",
             "updated": "2024-01-26T07:29:57.000Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-cas"
+                "org.apache.grails:grails-spring-security-cas"
             ],
-            "vcsUrl": "https://github.com/grails/grails-spring-security-cas"
+            "vcsUrl": "https://github.com/apache/grails-core/issues"
         },
         "documentationUrl": "https://grails.github.io/grails-spring-security-cas/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/spring-security-cas/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-cas/maven-metadata.xml",
         "readme": null
     },
     {
@@ -5760,9 +5754,8 @@
         "readme": "<h1>Grails Spring Security Kerberos Plugin</h1>\n<p>See <a href=\"https://grails-plugins.github.io/grails-spring-security-kerberos/\">documentation</a> for further information.</p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-ldap",
+            "name": "grails-spring-security-ldap",
             "repo": "plugins",
             "owner": "grails",
             "desc": "Grails spring-security-ldap plugin",
@@ -5774,22 +5767,21 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails-plugins/grails-spring-security-ldap/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "4.0.0.M1",
             "updated": "2020-03-24T10:30:31.547Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-ldap"
+                "org.apache.grails:grails-spring-security-ldap"
             ],
-            "vcsUrl": "https://github.com/grails-plugins/grails-spring-security-ldap"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
-        "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-ldap/",
-        "mavenMetadataUrl": null,
+        "documentationUrl": null,
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-ldap/maven-metadata.xml",
         "readme": "<p><a href=\"https://travis-ci.org/grails-plugins/grails-spring-security-ldap\"><img src=\"https://travis-ci.org/grails-plugins/grails-spring-security-ldap.svg\" alt=\"Build Status\" /></a></p>\n<h1>Grails Spring Security LDAP Plugin</h1>\n<p>See <a href=\"https://grails-plugins.github.io/grails-spring-security-ldap/\">documentation</a> for further information.</p>\n<h2>What is LDAP?</h2>\n<p><a href=\"https://www.youtube.com/watch?v=0Zl9NdumGK8#t=7.500125888\">Introduction to Lightweight Directory Services</a></p>\n<h2>Tools and Resources</h2>\n<ul>\n<li><a href=\"http://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/\">Online LDAP Test Server</a></li>\n<li><a href=\"http://jxplorer.org/index.html\">JXplorer - Cross platform LDAP browser and editor</a></li>\n</ul>\n<h2>Repository Branch Structure</h2>\n<p>Branches:</p>\n<ul>\n<li><code>master</code> Grails 4 compatible versions.</li>\n<li><code>3.x</code> Grails 3 compatible versions.</li>\n</ul>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Mar 10, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-oauth2",
+            "name": "grails-spring-security-oauth2",
             "repo": "plugins",
             "owner": "grails",
             "desc": "This plugin provides the capability to authenticate via OAuth 2. Depends on Grails spring-security-core.",
@@ -5801,16 +5793,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-spring-security-oauth2/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "3.0.1",
             "updated": "2024-01-23T14:30:36.000Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-oauth2"
+                "org.apache.grails:grails-spring-security-oauth2"
             ],
-            "vcsUrl": "https://github.com/grails/grails-spring-security-oauth2"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails.github.io/grails-spring-security-oauth2/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/spring-security-oauth2/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-oauth2/maven-metadata.xml",
         "readme": null
     },
     {
@@ -6050,9 +6042,8 @@
         "readme": "<h1>Spring Security OAuth2 VK Plugin</h1>\n<p><a href=\"https://bintray.com/purpleraven/plugins/spring-security-oauth2-vk/_latestVersion\"><img src=\"https://api.bintray.com/packages/purpleraven/plugins/spring-security-oauth2-vk/images/download.svg\" alt=\"Download\" /></a></p>\n<p>Add a VK OAuth2 provider to the <a href=\"https://github.com/MatrixCrawler/grails-spring-security-oauth2\">Spring Security OAuth2 Plugin</a>.</p>\n<h2>Installation</h2>\n<p>Add the following dependencies in <code>build.gradle</code></p>\n<pre><code>repositories {\n  ...\n  maven { url &quot;http://dl.bintray.com/purpleraven/plugins&quot; }\n  ...\n}\n\ndependencies {\n...\n    compile 'org.grails.plugins:spring-security-oauth2:1.1+'\n    compile 'org.grails.plugins:spring-security-oauth2-vk:1.0'\n...\n}\n</code></pre>\n<h2>Usage</h2>\n<p>Add this to your application.yml</p>\n<pre><code>grails:\n    plugin:\n        springsecurity:\n            oauth2:\n                providers:\n                    vk:\n                        api_key: 'vk-api-key'               #needed\n                        api_secret: 'vk-api-secret'         #needed\n                        successUri: &quot;/oauth2/vk/success&quot;    #optional\n                        failureUri: &quot;/oauth2/vk/failure&quot;    #optional\n                        callback: &quot;/oauth2/vk/callback&quot;     #optional\n</code></pre>\n<p>You can replace the URIs with your own controller implementation.</p>\n<p>In your view you can use the taglib exposed from this plugin and from OAuth plugin to create links and to know if the user is authenticated with a given provider:</p>\n<pre><code class=\"language-xml\">&lt;oauth2:connect provider=&quot;vk&quot; id=&quot;vk-connect-link&quot;&gt;VK&lt;/oauth2:connect&gt;\n\nLogged with VK?\n&lt;oauth2:ifLoggedInWith provider=&quot;vk&quot;&gt;yes&lt;/oauth2:ifLoggedInWith&gt;\n&lt;oauth2:ifNotLoggedInWith provider=&quot;vk&quot;&gt;no&lt;/oauth2:ifNotLoggedInWith&gt;\n</code></pre>\n<h2>License</h2>\n<p>Apache 2</p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-rest",
+            "name": "grails-spring-security-rest",
             "repo": "plugins",
             "owner": "grails",
             "desc": "Grails spring-security-rest plugin",
@@ -6064,22 +6055,21 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails-plugins/grails-spring-security-rest/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:10.703Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-rest"
+                "org.apache.grails:grails-spring-security-rest"
             ],
-            "vcsUrl": "https://github.com/alvarosanchez/grails-spring-security-rest"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
-        "mavenMetadataUrl": null,
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest/maven-metadata.xml",
         "readme": "<h1>Spring Security REST for Grails</h1>\n<p><a href=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest\"><img src=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest.png?branch=develop\" alt=\"Build Status\" /></a>\n<a href=\"https://bintray.com/grails/plugins/spring-security-rest/_latestVersion\"><img src=\"https://api.bintray.com/packages/grails/plugins/spring-security-rest/images/download.svg\" alt=\"Latest version\" /></a>\n<a href=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest\"><img src=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest/develop/badge.svg\" alt=\"Known Vulnerabilities\" /></a></p>\n<p>Grails plugin to implement a stateless, token-based, RESTful authentication\nusing Spring Security. Sponsored and supported by <a href=\"http://www.ociweb.com\">Object Computing Inc.</a></p>\n<p>Documentation:</p>\n<ul>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/\">User guide</a>.</li>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/gapi/\">Javadoc</a>.</li>\n</ul>\n<h2>Companies using this plugin</h2>\n<ul>\n<li><a href=\"http://www.onlinephotosubmission.com\">CloudCard Online Photo Submission</a></li>\n<li><a href=\"http://www.healthreveal.com\">HealthReveal</a></li>\n<li><a href=\"http://murallo.com\">Murallo</a></li>\n<li><a href=\"http://www.odobo.com\">Odobo</a></li>\n<li><a href=\"http://www.sharptop.io\">Sharptop Software</a></li>\n<li><a href=\"http://www.zaccak.com\">Zaccak Solutions</a></li>\n<li><a href=\"https://lyshnia.com\">Lyshnia Limited</a></li>\n<li><a href=\"https://www.wizpanda.com\">Wiz Panda</a></li>\n<li><a href=\"https://zana.com\">Zana Technologies GmbH</a></li>\n</ul>\n<p><em>Are you using this plugin and want to be listed here? <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/edit/develop/README.md\">Include your company yourself</a></em>.</p>\n<h2>Support</h2>\n<ul>\n<li>General questions should go to the <a href=\"https://grails.slack.com/messages/spring-security-rest\"><code>#spring-security-rest</code> channel in Slack</a>.</li>\n<li>You can also find answers at <a href=\"http://stackoverflow.com/questions/tagged/grails+spring-security-rest\">StackOverflow</a>. Label your questions with both the <code>grails</code> and <code>spring-security-rest</code> tags.</li>\n<li>If you've got issues, report them <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/issues\">here in GitHub</a>.</li>\n<li>If you need commercial support, you can ask <a href=\"http://www.ociweb.com\">OCI</a> at <a href=\"mailto:infoATociwebDOTcom\">info AT ociweb DOT com</a>.</li>\n</ul>\n<p><strong>NOTE</strong>: if you have questions or issues, <a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/index.html#_debugging\">enable debug logging</a>,\nand include the output in your request.</p>\n<h2>Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aeischeid\">Aaron Eischeid</a>.</li>\n<li><a href=\"https://github.com/ajbrown\">A.J. Brown</a>.</li>\n<li><a href=\"https://github.com/andrew-wharton\">Andrew Wharton</a>.</li>\n<li><a href=\"https://github.com/andrehschmid\">Andr\ufffd\ufffd\ufffd\ufffd Schmid</a>.</li>\n<li><a href=\"https://github.com/Alotor\">Alonso Torres</a>.</li>\n<li><a href=\"https://github.com/bgawel\">Bartek Gawel</a>.</li>\n<li><a href=\"https://github.com/rbfinch\">Bob Finch</a>.</li>\n<li><a href=\"https://github.com/bobbywarner\">Bobby Warner</a>.</li>\n<li><a href=\"https://github.com/burtbeckwith\">Burt Beckwith</a>.</li>\n<li><a href=\"https://github.com/conalllaverty\">Conall Laverty</a>.</li>\n<li><a href=\"https://github.com/tkvw\">Dennie de Lange</a>.</li>\n<li><a href=\"https://github.com/dmahapatro\">Dhiraj Mahapatro</a>.</li>\n<li><a href=\"https://github.com/domurtag\">Donal Murtagh</a>.</li>\n<li><a href=\"https://github.com/liftyourgame\">Greg Pagendam-Turner</a>.</li>\n<li><a href=\"https://github.com/Schlogen\">James Kleeh</a>.</li>\n<li><a href=\"https://github.com/jladenfors\">Jonas Ladenfors</a>.</li>\n<li><a href=\"https://github.com/jagedn\">Jorge Aguilera</a>.</li>\n<li><a href=\"https://github.com/zeludo\">Ludovic Ronsin</a>.</li>\n<li><a href=\"https://github.com/stlhrt\">Lukasz Wozniak</a>.</li>\n<li><a href=\"https://github.com/marcos-carceles\">Marcos Carceles</a>.</li>\n<li><a href=\"https://github.com/michallula\">Micha\ufffd\ufffd\ufffd\ufffd\ufffd Lula</a>.</li>\n<li><a href=\"https://github.com/majkelo\">Michal Szulc</a>.</li>\n<li><a href=\"https://github.com/nllarson\">Nick Larson</a>.</li>\n<li><a href=\"https://github.com/peh\">Philipp Eschenbach</a>.</li>\n<li><a href=\"https://github.com/giboow\">Philippe Gibert</a>.</li>\n<li><a href=\"https://github.com/pphetra\">Polawat Phetra</a>.</li>\n<li><a href=\"https://github.com/rvargas\">Rafael Vargas</a>.</li>\n<li><a href=\"https://github.com/sbrady\">Sean Brady</a>.</li>\n<li><a href=\"https://github.com/Prototik\">Sergey Shatunov</a>.</li>\n<li><a href=\"https://github.com/sdelamo\">Sergio del Amo</a>.</li>\n<li><a href=\"https://github.com/sagrawal31\">Shashank Agrawal</a>.</li>\n<li><a href=\"https://github.com/srohlin\">Svante Rohlin</a>.</li>\n<li><a href=\"https://github.com/tcrespog\">Tom\ufffd\ufffd\ufffd\ufffds Crespo</a>.</li>\n<li><a href=\"https://github.com/tonyerskine\">Tony Erskine</a>.</li>\n<li><a href=\"https://github.com/vsaar\">Victor Saar</a>.</li>\n</ul>\n<h2>License</h2>\n<p>This software is licensed under the terms of the <a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\">Apache License, Version 2.0</a></p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-rest-gorm",
+            "name": "grails-spring-security-rest-datamapping",
             "repo": "plugins",
             "owner": "grails",
             "desc": "Spring Security REST plugin for Grails - GORM module",
@@ -6091,16 +6081,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails-plugins/grails-spring-security-rest/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:13.612Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-rest-gorm"
+                "org.apache.grails:grails-spring-security-rest-datamapping"
             ],
-            "vcsUrl": "https://github.com/grails-plugins/grails-spring-security-rest"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
-        "mavenMetadataUrl": null,
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest-datamapping/maven-metadata.xml",
         "readme": "<h1>Spring Security REST for Grails</h1>\n<p><a href=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest\"><img src=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest.png?branch=develop\" alt=\"Build Status\" /></a>\n<a href=\"https://bintray.com/grails/plugins/spring-security-rest/_latestVersion\"><img src=\"https://api.bintray.com/packages/grails/plugins/spring-security-rest/images/download.svg\" alt=\"Latest version\" /></a>\n<a href=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest\"><img src=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest/develop/badge.svg\" alt=\"Known Vulnerabilities\" /></a></p>\n<p>Grails plugin to implement a stateless, token-based, RESTful authentication\nusing Spring Security. Sponsored and supported by <a href=\"http://www.ociweb.com\">Object Computing Inc.</a></p>\n<p>Documentation:</p>\n<ul>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/\">User guide</a>.</li>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/gapi/\">Javadoc</a>.</li>\n</ul>\n<h2>Companies using this plugin</h2>\n<ul>\n<li><a href=\"http://www.onlinephotosubmission.com\">CloudCard Online Photo Submission</a></li>\n<li><a href=\"http://www.healthreveal.com\">HealthReveal</a></li>\n<li><a href=\"http://murallo.com\">Murallo</a></li>\n<li><a href=\"http://www.odobo.com\">Odobo</a></li>\n<li><a href=\"http://www.sharptop.io\">Sharptop Software</a></li>\n<li><a href=\"http://www.zaccak.com\">Zaccak Solutions</a></li>\n<li><a href=\"https://lyshnia.com\">Lyshnia Limited</a></li>\n<li><a href=\"https://www.wizpanda.com\">Wiz Panda</a></li>\n<li><a href=\"https://zana.com\">Zana Technologies GmbH</a></li>\n</ul>\n<p><em>Are you using this plugin and want to be listed here? <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/edit/develop/README.md\">Include your company yourself</a></em>.</p>\n<h2>Support</h2>\n<ul>\n<li>General questions should go to the <a href=\"https://grails.slack.com/messages/spring-security-rest\"><code>#spring-security-rest</code> channel in Slack</a>.</li>\n<li>You can also find answers at <a href=\"http://stackoverflow.com/questions/tagged/grails+spring-security-rest\">StackOverflow</a>. Label your questions with both the <code>grails</code> and <code>spring-security-rest</code> tags.</li>\n<li>If you've got issues, report them <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/issues\">here in GitHub</a>.</li>\n<li>If you need commercial support, you can ask <a href=\"http://www.ociweb.com\">OCI</a> at <a href=\"mailto:infoATociwebDOTcom\">info AT ociweb DOT com</a>.</li>\n</ul>\n<p><strong>NOTE</strong>: if you have questions or issues, <a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/index.html#_debugging\">enable debug logging</a>,\nand include the output in your request.</p>\n<h2>Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aeischeid\">Aaron Eischeid</a>.</li>\n<li><a href=\"https://github.com/ajbrown\">A.J. Brown</a>.</li>\n<li><a href=\"https://github.com/andrew-wharton\">Andrew Wharton</a>.</li>\n<li><a href=\"https://github.com/andrehschmid\">Andr\ufffd\ufffd\ufffd\ufffd Schmid</a>.</li>\n<li><a href=\"https://github.com/Alotor\">Alonso Torres</a>.</li>\n<li><a href=\"https://github.com/bgawel\">Bartek Gawel</a>.</li>\n<li><a href=\"https://github.com/rbfinch\">Bob Finch</a>.</li>\n<li><a href=\"https://github.com/bobbywarner\">Bobby Warner</a>.</li>\n<li><a href=\"https://github.com/burtbeckwith\">Burt Beckwith</a>.</li>\n<li><a href=\"https://github.com/conalllaverty\">Conall Laverty</a>.</li>\n<li><a href=\"https://github.com/tkvw\">Dennie de Lange</a>.</li>\n<li><a href=\"https://github.com/dmahapatro\">Dhiraj Mahapatro</a>.</li>\n<li><a href=\"https://github.com/domurtag\">Donal Murtagh</a>.</li>\n<li><a href=\"https://github.com/liftyourgame\">Greg Pagendam-Turner</a>.</li>\n<li><a href=\"https://github.com/Schlogen\">James Kleeh</a>.</li>\n<li><a href=\"https://github.com/jladenfors\">Jonas Ladenfors</a>.</li>\n<li><a href=\"https://github.com/jagedn\">Jorge Aguilera</a>.</li>\n<li><a href=\"https://github.com/zeludo\">Ludovic Ronsin</a>.</li>\n<li><a href=\"https://github.com/stlhrt\">Lukasz Wozniak</a>.</li>\n<li><a href=\"https://github.com/marcos-carceles\">Marcos Carceles</a>.</li>\n<li><a href=\"https://github.com/michallula\">Micha\ufffd\ufffd\ufffd\ufffd\ufffd Lula</a>.</li>\n<li><a href=\"https://github.com/majkelo\">Michal Szulc</a>.</li>\n<li><a href=\"https://github.com/nllarson\">Nick Larson</a>.</li>\n<li><a href=\"https://github.com/peh\">Philipp Eschenbach</a>.</li>\n<li><a href=\"https://github.com/giboow\">Philippe Gibert</a>.</li>\n<li><a href=\"https://github.com/pphetra\">Polawat Phetra</a>.</li>\n<li><a href=\"https://github.com/rvargas\">Rafael Vargas</a>.</li>\n<li><a href=\"https://github.com/sbrady\">Sean Brady</a>.</li>\n<li><a href=\"https://github.com/Prototik\">Sergey Shatunov</a>.</li>\n<li><a href=\"https://github.com/sdelamo\">Sergio del Amo</a>.</li>\n<li><a href=\"https://github.com/sagrawal31\">Shashank Agrawal</a>.</li>\n<li><a href=\"https://github.com/srohlin\">Svante Rohlin</a>.</li>\n<li><a href=\"https://github.com/tcrespog\">Tom\ufffd\ufffd\ufffd\ufffds Crespo</a>.</li>\n<li><a href=\"https://github.com/tonyerskine\">Tony Erskine</a>.</li>\n<li><a href=\"https://github.com/vsaar\">Victor Saar</a>.</li>\n</ul>\n<h2>License</h2>\n<p>This software is licensed under the terms of the <a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\">Apache License, Version 2.0</a></p>\n"
     },
     {
@@ -6157,9 +6147,8 @@
         "readme": "<h1>Spring Security REST for Grails</h1>\n<p><a href=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest\"><img src=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest.png?branch=develop\" alt=\"Build Status\" /></a>\n<a href=\"https://bintray.com/grails/plugins/spring-security-rest/_latestVersion\"><img src=\"https://api.bintray.com/packages/grails/plugins/spring-security-rest/images/download.svg\" alt=\"Latest version\" /></a>\n<a href=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest\"><img src=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest/develop/badge.svg\" alt=\"Known Vulnerabilities\" /></a></p>\n<p>Grails plugin to implement a stateless, token-based, RESTful authentication\nusing Spring Security. Sponsored and supported by <a href=\"http://www.ociweb.com\">Object Computing Inc.</a></p>\n<p>Documentation:</p>\n<ul>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/\">User guide</a>.</li>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/gapi/\">Javadoc</a>.</li>\n</ul>\n<h2>Companies using this plugin</h2>\n<ul>\n<li><a href=\"http://www.onlinephotosubmission.com\">CloudCard Online Photo Submission</a></li>\n<li><a href=\"http://www.healthreveal.com\">HealthReveal</a></li>\n<li><a href=\"http://murallo.com\">Murallo</a></li>\n<li><a href=\"http://www.odobo.com\">Odobo</a></li>\n<li><a href=\"http://www.sharptop.io\">Sharptop Software</a></li>\n<li><a href=\"http://www.zaccak.com\">Zaccak Solutions</a></li>\n<li><a href=\"https://lyshnia.com\">Lyshnia Limited</a></li>\n<li><a href=\"https://www.wizpanda.com\">Wiz Panda</a></li>\n<li><a href=\"https://zana.com\">Zana Technologies GmbH</a></li>\n</ul>\n<p><em>Are you using this plugin and want to be listed here? <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/edit/develop/README.md\">Include your company yourself</a></em>.</p>\n<h2>Support</h2>\n<ul>\n<li>General questions should go to the <a href=\"https://grails.slack.com/messages/spring-security-rest\"><code>#spring-security-rest</code> channel in Slack</a>.</li>\n<li>You can also find answers at <a href=\"http://stackoverflow.com/questions/tagged/grails+spring-security-rest\">StackOverflow</a>. Label your questions with both the <code>grails</code> and <code>spring-security-rest</code> tags.</li>\n<li>If you've got issues, report them <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/issues\">here in GitHub</a>.</li>\n<li>If you need commercial support, you can ask <a href=\"http://www.ociweb.com\">OCI</a> at <a href=\"mailto:infoATociwebDOTcom\">info AT ociweb DOT com</a>.</li>\n</ul>\n<p><strong>NOTE</strong>: if you have questions or issues, <a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/index.html#_debugging\">enable debug logging</a>,\nand include the output in your request.</p>\n<h2>Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aeischeid\">Aaron Eischeid</a>.</li>\n<li><a href=\"https://github.com/ajbrown\">A.J. Brown</a>.</li>\n<li><a href=\"https://github.com/andrew-wharton\">Andrew Wharton</a>.</li>\n<li><a href=\"https://github.com/andrehschmid\">Andr\ufffd\ufffd\ufffd\ufffd Schmid</a>.</li>\n<li><a href=\"https://github.com/Alotor\">Alonso Torres</a>.</li>\n<li><a href=\"https://github.com/bgawel\">Bartek Gawel</a>.</li>\n<li><a href=\"https://github.com/rbfinch\">Bob Finch</a>.</li>\n<li><a href=\"https://github.com/bobbywarner\">Bobby Warner</a>.</li>\n<li><a href=\"https://github.com/burtbeckwith\">Burt Beckwith</a>.</li>\n<li><a href=\"https://github.com/conalllaverty\">Conall Laverty</a>.</li>\n<li><a href=\"https://github.com/tkvw\">Dennie de Lange</a>.</li>\n<li><a href=\"https://github.com/dmahapatro\">Dhiraj Mahapatro</a>.</li>\n<li><a href=\"https://github.com/domurtag\">Donal Murtagh</a>.</li>\n<li><a href=\"https://github.com/liftyourgame\">Greg Pagendam-Turner</a>.</li>\n<li><a href=\"https://github.com/Schlogen\">James Kleeh</a>.</li>\n<li><a href=\"https://github.com/jladenfors\">Jonas Ladenfors</a>.</li>\n<li><a href=\"https://github.com/jagedn\">Jorge Aguilera</a>.</li>\n<li><a href=\"https://github.com/zeludo\">Ludovic Ronsin</a>.</li>\n<li><a href=\"https://github.com/stlhrt\">Lukasz Wozniak</a>.</li>\n<li><a href=\"https://github.com/marcos-carceles\">Marcos Carceles</a>.</li>\n<li><a href=\"https://github.com/michallula\">Micha\ufffd\ufffd\ufffd\ufffd\ufffd Lula</a>.</li>\n<li><a href=\"https://github.com/majkelo\">Michal Szulc</a>.</li>\n<li><a href=\"https://github.com/nllarson\">Nick Larson</a>.</li>\n<li><a href=\"https://github.com/peh\">Philipp Eschenbach</a>.</li>\n<li><a href=\"https://github.com/giboow\">Philippe Gibert</a>.</li>\n<li><a href=\"https://github.com/pphetra\">Polawat Phetra</a>.</li>\n<li><a href=\"https://github.com/rvargas\">Rafael Vargas</a>.</li>\n<li><a href=\"https://github.com/sbrady\">Sean Brady</a>.</li>\n<li><a href=\"https://github.com/Prototik\">Sergey Shatunov</a>.</li>\n<li><a href=\"https://github.com/sdelamo\">Sergio del Amo</a>.</li>\n<li><a href=\"https://github.com/sagrawal31\">Shashank Agrawal</a>.</li>\n<li><a href=\"https://github.com/srohlin\">Svante Rohlin</a>.</li>\n<li><a href=\"https://github.com/tcrespog\">Tom\ufffd\ufffd\ufffd\ufffds Crespo</a>.</li>\n<li><a href=\"https://github.com/tonyerskine\">Tony Erskine</a>.</li>\n<li><a href=\"https://github.com/vsaar\">Victor Saar</a>.</li>\n</ul>\n<h2>License</h2>\n<p>This software is licensed under the terms of the <a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\">Apache License, Version 2.0</a></p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-rest-redis",
+            "name": "grails-spring-security-rest-redis",
             "repo": "plugins",
             "owner": "grails",
             "desc": "Spring Security REST plugin for Grails - Redis module",
@@ -6172,16 +6161,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails-plugins/grails-spring-security-rest/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:18.295Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-rest-redis"
+                "org.apache.grails:grails-spring-security-rest-redis"
             ],
-            "vcsUrl": "https://github.com/alvarosanchez/grails-spring-security-rest"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
-        "mavenMetadataUrl": null,
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest-redis/maven-metadata.xml",
         "readme": "<h1>Spring Security REST for Grails</h1>\n<p><a href=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest\"><img src=\"https://travis-ci.org/alvarosanchez/grails-spring-security-rest.png?branch=develop\" alt=\"Build Status\" /></a>\n<a href=\"https://bintray.com/grails/plugins/spring-security-rest/_latestVersion\"><img src=\"https://api.bintray.com/packages/grails/plugins/spring-security-rest/images/download.svg\" alt=\"Latest version\" /></a>\n<a href=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest\"><img src=\"https://snyk.io/test/github/alvarosanchez/grails-spring-security-rest/develop/badge.svg\" alt=\"Known Vulnerabilities\" /></a></p>\n<p>Grails plugin to implement a stateless, token-based, RESTful authentication\nusing Spring Security. Sponsored and supported by <a href=\"http://www.ociweb.com\">Object Computing Inc.</a></p>\n<p>Documentation:</p>\n<ul>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/\">User guide</a>.</li>\n<li><a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/gapi/\">Javadoc</a>.</li>\n</ul>\n<h2>Companies using this plugin</h2>\n<ul>\n<li><a href=\"http://www.onlinephotosubmission.com\">CloudCard Online Photo Submission</a></li>\n<li><a href=\"http://www.healthreveal.com\">HealthReveal</a></li>\n<li><a href=\"http://murallo.com\">Murallo</a></li>\n<li><a href=\"http://www.odobo.com\">Odobo</a></li>\n<li><a href=\"http://www.sharptop.io\">Sharptop Software</a></li>\n<li><a href=\"http://www.zaccak.com\">Zaccak Solutions</a></li>\n<li><a href=\"https://lyshnia.com\">Lyshnia Limited</a></li>\n<li><a href=\"https://www.wizpanda.com\">Wiz Panda</a></li>\n<li><a href=\"https://zana.com\">Zana Technologies GmbH</a></li>\n</ul>\n<p><em>Are you using this plugin and want to be listed here? <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/edit/develop/README.md\">Include your company yourself</a></em>.</p>\n<h2>Support</h2>\n<ul>\n<li>General questions should go to the <a href=\"https://grails.slack.com/messages/spring-security-rest\"><code>#spring-security-rest</code> channel in Slack</a>.</li>\n<li>You can also find answers at <a href=\"http://stackoverflow.com/questions/tagged/grails+spring-security-rest\">StackOverflow</a>. Label your questions with both the <code>grails</code> and <code>spring-security-rest</code> tags.</li>\n<li>If you've got issues, report them <a href=\"https://github.com/alvarosanchez/grails-spring-security-rest/issues\">here in GitHub</a>.</li>\n<li>If you need commercial support, you can ask <a href=\"http://www.ociweb.com\">OCI</a> at <a href=\"mailto:infoATociwebDOTcom\">info AT ociweb DOT com</a>.</li>\n</ul>\n<p><strong>NOTE</strong>: if you have questions or issues, <a href=\"http://alvarosanchez.github.io/grails-spring-security-rest/latest/docs/index.html#_debugging\">enable debug logging</a>,\nand include the output in your request.</p>\n<h2>Contributors</h2>\n<ul>\n<li><a href=\"https://github.com/aeischeid\">Aaron Eischeid</a>.</li>\n<li><a href=\"https://github.com/ajbrown\">A.J. Brown</a>.</li>\n<li><a href=\"https://github.com/andrew-wharton\">Andrew Wharton</a>.</li>\n<li><a href=\"https://github.com/andrehschmid\">Andr\ufffd\ufffd\ufffd\ufffd Schmid</a>.</li>\n<li><a href=\"https://github.com/Alotor\">Alonso Torres</a>.</li>\n<li><a href=\"https://github.com/bgawel\">Bartek Gawel</a>.</li>\n<li><a href=\"https://github.com/rbfinch\">Bob Finch</a>.</li>\n<li><a href=\"https://github.com/bobbywarner\">Bobby Warner</a>.</li>\n<li><a href=\"https://github.com/burtbeckwith\">Burt Beckwith</a>.</li>\n<li><a href=\"https://github.com/conalllaverty\">Conall Laverty</a>.</li>\n<li><a href=\"https://github.com/tkvw\">Dennie de Lange</a>.</li>\n<li><a href=\"https://github.com/dmahapatro\">Dhiraj Mahapatro</a>.</li>\n<li><a href=\"https://github.com/domurtag\">Donal Murtagh</a>.</li>\n<li><a href=\"https://github.com/liftyourgame\">Greg Pagendam-Turner</a>.</li>\n<li><a href=\"https://github.com/Schlogen\">James Kleeh</a>.</li>\n<li><a href=\"https://github.com/jladenfors\">Jonas Ladenfors</a>.</li>\n<li><a href=\"https://github.com/jagedn\">Jorge Aguilera</a>.</li>\n<li><a href=\"https://github.com/zeludo\">Ludovic Ronsin</a>.</li>\n<li><a href=\"https://github.com/stlhrt\">Lukasz Wozniak</a>.</li>\n<li><a href=\"https://github.com/marcos-carceles\">Marcos Carceles</a>.</li>\n<li><a href=\"https://github.com/michallula\">Micha\ufffd\ufffd\ufffd\ufffd\ufffd Lula</a>.</li>\n<li><a href=\"https://github.com/majkelo\">Michal Szulc</a>.</li>\n<li><a href=\"https://github.com/nllarson\">Nick Larson</a>.</li>\n<li><a href=\"https://github.com/peh\">Philipp Eschenbach</a>.</li>\n<li><a href=\"https://github.com/giboow\">Philippe Gibert</a>.</li>\n<li><a href=\"https://github.com/pphetra\">Polawat Phetra</a>.</li>\n<li><a href=\"https://github.com/rvargas\">Rafael Vargas</a>.</li>\n<li><a href=\"https://github.com/sbrady\">Sean Brady</a>.</li>\n<li><a href=\"https://github.com/Prototik\">Sergey Shatunov</a>.</li>\n<li><a href=\"https://github.com/sdelamo\">Sergio del Amo</a>.</li>\n<li><a href=\"https://github.com/sagrawal31\">Shashank Agrawal</a>.</li>\n<li><a href=\"https://github.com/srohlin\">Svante Rohlin</a>.</li>\n<li><a href=\"https://github.com/tcrespog\">Tom\ufffd\ufffd\ufffd\ufffds Crespo</a>.</li>\n<li><a href=\"https://github.com/tonyerskine\">Tony Erskine</a>.</li>\n<li><a href=\"https://github.com/vsaar\">Victor Saar</a>.</li>\n</ul>\n<h2>License</h2>\n<p>This software is licensed under the terms of the <a href=\"http://www.apache.org/licenses/LICENSE-2.0.html\">Apache License, Version 2.0</a></p>\n"
     },
     {
@@ -6264,9 +6253,8 @@
         "readme": "<h1>Grails Spring Security Shiro Plugin <a href=\"https://travis-ci.org/grails-plugins/grails-spring-security-shiro\"><img src=\"https://travis-ci.org/grails-plugins/grails-spring-security-shiro.svg?branch=master\" alt=\"Build Status\" /></a></h1>\n<p>See <a href=\"http://grails-plugins.github.io/grails-spring-security-shiro/\">documentation</a> for further information.</p>\n"
     },
     {
-        "deprecated": "This repository was archived by the owner on Feb 28, 2025. It is now read-only.",
         "bintrayPackage": {
-            "name": "spring-security-ui",
+            "name": "grails-spring-security-ui",
             "repo": "plugins",
             "owner": "grails",
             "desc": "Grails Spring Security UI",
@@ -6277,16 +6265,16 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/grails-spring-security-ui/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "4.0.0-RC1",
             "updated": "2022-09-07T00:00:00.000Z",
             "systemIds": [
-                "org.grails.plugins:spring-security-ui"
+                "org.apache.grails:grails-spring-security-ui"
             ],
-            "vcsUrl": "https://github.com/grails-plugins/grails-spring-security-ui"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://grails.github.io/grails-spring-security-ui/",
-        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/plugins/spring-security-ui/maven-metadata.xml",
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-ui/maven-metadata.xml",
         "readme": "<h1>Grails Spring Security UI</h1>\n<p><a href=\"https://grails.github.io/grails-spring-security-ui/\">Documentation</a></p>\n"
     },
     {
