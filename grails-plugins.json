@@ -5172,7 +5172,6 @@
     },
     {
         "comment": "Hard to tell versions to use here. According to https://gorm.grails.org/latest/rx/manual/ it is 7.3.2 but the latest release of this plugin is 6.1.7",
-        "deprecated": "This repository was archived by the owner on Mar 13, 2025. It is now read-only.",
         "bintrayPackage": {
             "name": "rx-mongodb",
             "repo": "plugins",
