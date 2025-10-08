@@ -5186,17 +5186,17 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/grails/gorm-mongodb/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "6.1.7",
             "updated": "2020-07-06T19:52:37.703Z",
             "systemIds": [
                 "org.grails.plugins:rx-mongodb"
             ],
-            "vcsUrl": "https://github.com/grails/gorm-mongodb"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": "https://gorm.grails.org/latest/rx/manual/",
         "mavenMetadataUrl": null,
-        "readme": "<p><img src=\"https://github.com/grails/gorm-mongodb/workflows/Java%20CI/badge.svg?branch=master\" alt=\"Java CI\" />\n<img src=\"https://github.com/grails/gorm-mongodb/workflows/Release/badge.svg?branch=master\" alt=\"Release\" /></p>\n<h1>GORM for MongoDB</h1>\n<p>This project implements <a href=\"http://gorm.grails.org/latest/\">GORM</a> for the MongoDB Document Database.</p>\n<p>NOTE: This source code here is for version 6.x and above. For prevoius versions' source see the relevant branch on the <a href=\"https://github.com/grails/grails-data-mapping/tree/5.x/grails-datastore-gorm-mongodb\">Grails Data Mapping project</a>.</p>\n<p>For more information see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/latest/mongodb/manual\">Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/latest/mongodb/api\">API</a></li>\n<li><a href=\"https://grails.org/plugins.html#plugin/mongodb\">Grails Plugin</a></li>\n</ul>\n<p>For the current development version see the following links:</p>\n<ul>\n<li><a href=\"http://gorm.grails.org/snapshot/mongodb/manual\">Beta Documentation</a></li>\n<li><a href=\"http://gorm.grails.org/snapshot/mongodb/api\">Beta API</a></li>\n</ul>\n"
+        "readme": "<h1>GORM for MongoDB</h1>\n<p>This project implements <a href=\"https://gorm.grails.org/latest/\">GORM</a> for the MongoDB Document Database.</p>\n<li><a href=\"https://gorm.grails.org/latest/mongodb/api\">API</a></li>\n</ul>\n<p>For the current development version see the following links:</p>\n<ul>\n<li><a href=\"https://gorm.grails.org/snapshot/mongodb/manual\">Beta Documentation</a></li>\n<li><a href=\"https://gorm.grails.org/snapshot/mongodb/api\">Beta API</a></li>\n</ul>\n"
     },
     {
         "bintrayPackage": {
