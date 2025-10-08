@@ -1136,7 +1136,6 @@
         "readme": null
     },
     {
-        "deprecated": "This repository was archived by the owner on Sep 10, 2024. It is now read-only.",
         "bintrayPackage": {
             "name": "console",
             "repo": "grails-plugins",
@@ -1150,17 +1149,17 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/sheehan/grails-console/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
             "latestVersion": "2.1.1",
             "updated": "2018-01-23T03:19:17.309Z",
             "systemIds": [
-                "org.grails.plugins:grails-console"
+                "org.grails:grails-console"
             ],
-            "vcsUrl": "https://github.com/sheehan/grails-console"
+            "vcsUrl": "https://github.com/apache/grails-core"
         },
         "documentationUrl": null,
-        "mavenMetadataUrl": null,
-        "readme": "<h2>Summary</h2>\n<p>A web-based Groovy console for interactive runtime application management and debugging</p>\n<p><img src=\"https://raw.github.com/sheehan/grails-console/images/screenshot.png\" alt=\"Screenshot\" /></p>\n<h2>Installation</h2>\n<p>The <a href=\"https://grails.org/plugin/console\">1.X</a> version is for Grails 2.</p>\n<p>The <a href=\"http://plugins.grails.org/plugin/sheehan/console\">2.0.X</a> version is for Grails 3.0 - 3.2.</p>\n<p>The <a href=\"http://plugins.grails.org/plugin/sheehan/console\">2.1.X</a> version is for Grails 3.3+.</p>\n<h3>Grails 2</h3>\n<p>Add a dependency in BuildConfig.groovy:</p>\n<pre><code class=\"language-groovy\">grails.project.dependency.resolution = {\n  // ...\n  plugins {\n    runtime ':console:1.5.12'\n    // ...\n  }\n}\n</code></pre>\n<h3>Grails 3+</h3>\n<p><strong>Note:</strong> If using Grails 3.0.4, you need to update the asset-pipeline dependency in build.gradle to 3.0.6 or greater. 3.0.5 is used by default and has a bug that prevents the console page from rendering.</p>\n<p><strong>Note:</strong> If using Grails 3.0.12, you will need to add this to your configuration:  <code>grails.resources.pattern = '/**'</code>. There is a <a href=\"https://github.com/grails/grails-core/issues/9584\">bug</a> related to resource paths.</p>\n<p>Add a dependency in build.gradle</p>\n<pre><code class=\"language-groovy\">runtime 'org.grails.plugins:grails-console:2.1.1'\n</code></pre>\n<h2>Usage</h2>\n<p>Use a browser to navigate to the /console page of your running app, e.g. http://localhost:8080/{app-name}/console</p>\n<p>Type any Groovy commands in the console text area, then click on the execute button. The console plugin relies on Groovy Shell. Lookup Groovy Shell documentation for more information.\nThe Groovy Shell uses the Grails classloader, so you can access any class or artifact (e.g. domain classes, services, etc.) just like in your application code.</p>\n<h2>Saving/loading scripts</h2>\n<p>Click on the <code>Save</code> button to save the current script.</p>\n<p>Use the Storage pane to navigate existing files. Click on a file to load it into the editor.</p>\n<p>There are currently two storage options available:</p>\n<h3>Local Storage</h3>\n<p>Local Storage uses HTML5 <a href=\"http://dev.w3.org/html5/webstorage/\">Web Storage</a>. The files are serialized and stored in the browser as a map under the key <code>gconsole.files</code>.</p>\n<h3>Remote Storage</h3>\n<p>Remote Storage uses the filesystem of the server on which the application is running.</p>\n<h2>Writing to the browser console</h2>\n<p>Calls made to the implicit <code>console</code> variable will be executed on the browser's console.\nThe arguments are serialized as JSON and the calls are queued to run after the script completes.</p>\n<p>Example:\n<img src=\"https://raw.github.com/sheehan/grails-console/images/screenshot2.png\" alt=\"Screenshot\" /></p>\n<h2>Implicit variables</h2>\n<p>The following implicit variables are available:</p>\n<ul>\n<li><code>ctx</code> - the Spring <a href=\"http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/context/ApplicationContext.html\">ApplicationContext</a></li>\n<li><code>grailsApplication</code> - the <a href=\"http://grails.org/doc/latest/api/org/codehaus/groovy/grails/commons/GrailsApplication.html\">GrailsApplication</a> instance</li>\n<li><code>config</code> - the Grails configuration</li>\n<li><code>request</code> - the current <a href=\"http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpServletRequest.html\">HTTP request</a></li>\n<li><code>session</code> - the current <a href=\"http://java.sun.com/products/servlet/2.3/javadoc/javax/servlet/http/HttpSession.html\">HTTP session</a></li>\n<li><code>out</code> - the output <a href=\"http://docs.oracle.com/javase/7/docs/api/java/io/PrintStream.html\">PrintStream</a></li>\n</ul>\n<p>See <a href=\"https://github.com/sheehan/grails-console/wiki/Script-Examples\">Script Examples</a> for example usage.</p>\n<h2>Keyboard Shortcuts</h2>\n<p>| Key | Command |\n|---|---|\n| Ctrl-Enter / \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-Enter | Execute |\n| Ctrl-S / \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd-S         | Save |\n| Esc                  | Clear output |</p>\n<h2>Configuration</h2>\n<p>The following configuration options are available:</p>\n<p>| Property | Description |\n|---|---|\n| <code>grails.plugin.console.enabled</code>                  | Whether to enable the plugin. Default is true for the development environment, false otherwise. |\n| <code>grails.plugin.console.baseUrl</code>                  | Base URL for the console controller. Can be a String or a List of Strings if having multiple URLs is desired. Default uses createLink(). |\n| <code>grails.plugin.console.fileStore.remote.enabled</code> | Whether to include the remote file store functionality. Default is true. |\n| <code>grails.plugin.console.fileStore.remote.defaultPath</code> | Default path when browsing remote files. Default is <code>/</code>. |\n| <code>grails.plugin.console.layout</code>                   | Used to override the plugin's GSP layout. |\n| <code>grails.plugin.console.newFileText</code>              | Text to display as a template for new files. Can be used to add frequently used imports, environment specific warnings, etc... Defaults to empty. |\n| <code>grails.plugin.console.tabSize</code>                  | The width of a tab character. Defaults to 4. |\n| <code>grails.plugin.console.indentWithTabs</code>           | Whether indents should use tabs rather than spaces. Default is false. |\n| <code>grails.plugin.console.indentUnit</code>               | How many spaces a block should be indented. Default is 4. |\n| <code>grails.plugin.console.csrfProtection.enabled</code>   | Whether to enable CSRF protection. Default is true. |</p>\n<h2>Security</h2>\n<p>By default (as of v1.5.0) the console plugin is only enabled in the development environment. You can enable or disable it for any environment with\nthe <code>grails.plugin.console.enabled</code> config option in Config.groovy / application.groovy (Grails 3). If the plugin is enabled in non-development environments, be sure to guard access using a security plugin like Spring Security Core or Shiro. For Grails 2.x, the paths <code>/console/**</code> and <code>/plugins/console*/**</code> should be secured. For Grails 3.x, the paths <code>/console/**</code> and <code>/static/console/**</code> should be secured.</p>\n<p>Spring Security Core example:</p>\n<pre><code class=\"language-groovy\">grails.plugin.springsecurity.controllerAnnotations.staticRules = [\n    [pattern:&quot;/console/**&quot;,          access:['ROLE_ADMIN']],\n    [pattern:&quot;/plugins/console*/**&quot;, access:['ROLE_ADMIN']],  // Grails 2.x\n    [pattern:&quot;/static/console/**&quot;,   access:['ROLE_ADMIN']], // Grails 3.x\n]\n</code></pre>\n<p>Another example restricting access to localhost IPs:</p>\n<pre><code class=\"language-groovy\">grails.plugin.springsecurity.controllerAnnotations.staticRules = [\n    [pattern:&quot;/console/**&quot;,          access:[&quot;hasRole('ROLE_ADMIN') &amp;&amp; (hasIpAddress('127.0.0.1') || hasIpAddress('::1'))&quot;]],\n    [pattern:&quot;/plugins/console*/**&quot;, access:[&quot;hasRole('ROLE_ADMIN') &amp;&amp; (hasIpAddress('127.0.0.1') || hasIpAddress('::1'))&quot;]], // Grails 2.x\n    [pattern:&quot;/static/console/**&quot;,   access:[&quot;hasRole('ROLE_ADMIN') &amp;&amp; (hasIpAddress('127.0.0.1') || hasIpAddress('::1'))&quot;]], // Grails 3.x\n]\n</code></pre>\n<h2>Authors</h2>\n<ul>\n<li><a href=\"https://github.com/ziegfried\">Siegfried Puchbauer</a></li>\n<li><a href=\"https://github.com/mingfai\">Mingfai Ma</a></li>\n<li><a href=\"https://github.com/burtbeckwith\">Burt Beckwith</a></li>\n<li><a href=\"https://github.com/sheehan\">Matt Sheehan</a></li>\n<li><a href=\"https://github.com/mjhugo\">Mike Hugo</a></li>\n</ul>\n<h2>Development</h2>\n<p>Please see <a href=\"CONTRIBUTING.md\">CONTRIBUTING.md</a></p>\n"
+        "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/grails/grails-console/maven-metadata.xml",
+        "readme": "<h2>Summary</h2>\n<p>A web-based Groovy console for interactive runtime application management and debugging</p>"
     },
     {
         "bintrayPackage": {
@@ -5793,13 +5792,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-spring-security/issues",
             "latestVersion": "3.0.1",
             "updated": "2024-01-23T14:30:36.000Z",
             "systemIds": [
                 "org.apache.grails:grails-spring-security-oauth2"
             ],
-            "vcsUrl": "https://github.com/apache/grails-core"
+            "vcsUrl": "https://github.com/apache/grails-spring-security"
         },
         "documentationUrl": "https://grails.github.io/grails-spring-security-oauth2/",
         "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-oauth2/maven-metadata.xml",
@@ -6055,13 +6054,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-spring-security/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:10.703Z",
             "systemIds": [
                 "org.apache.grails:grails-spring-security-rest"
             ],
-            "vcsUrl": "https://github.com/apache/grails-core"
+            "vcsUrl": "https://github.com/apache/grails-spring-security"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
         "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest/maven-metadata.xml",
@@ -6081,13 +6080,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-spring-security/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:13.612Z",
             "systemIds": [
                 "org.apache.grails:grails-spring-security-rest-datamapping"
             ],
-            "vcsUrl": "https://github.com/apache/grails-core"
+            "vcsUrl": "https://github.com/apache/grails-spring-security"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
         "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest-datamapping/maven-metadata.xml",
@@ -6161,13 +6160,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-spring-security/issues",
             "latestVersion": "3.0.1",
             "updated": "2020-04-06T05:51:18.295Z",
             "systemIds": [
                 "org.apache.grails:grails-spring-security-rest-redis"
             ],
-            "vcsUrl": "https://github.com/apache/grails-core"
+            "vcsUrl": "https://github.com/apache/grails-spring-security"
         },
         "documentationUrl": "https://grails-plugins.github.io/grails-spring-security-rest/latest/docs/",
         "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-rest-redis/maven-metadata.xml",
@@ -6265,13 +6264,13 @@
             "licenses": [
                 "Apache-2.0"
             ],
-            "issueTrackerUrl": "https://github.com/apache/grails-core/issues",
+            "issueTrackerUrl": "https://github.com/apache/grails-spring-security/issues",
             "latestVersion": "4.0.0-RC1",
             "updated": "2022-09-07T00:00:00.000Z",
             "systemIds": [
                 "org.apache.grails:grails-spring-security-ui"
             ],
-            "vcsUrl": "https://github.com/apache/grails-core"
+            "vcsUrl": "https://github.com/apache/grails-spring-security"
         },
         "documentationUrl": "https://grails.github.io/grails-spring-security-ui/",
         "mavenMetadataUrl": "https://repo1.maven.org/maven2/org/apache/grails/grails-spring-security-ui/maven-metadata.xml",
